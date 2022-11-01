@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>10.3</string>
+	<key>CFBundleDisplayName</key>
+	<string>ClientName</string>
+	<key>CFBundleIdentifier</key>
+	<string>nl.clientweb.webapp</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>CFBundleName</key>
+	<string>ClientName </string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>ClientName  App would like to access your calender</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.23</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The application uses your camera to take photos of attachments</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>The application uses your camera to take photos of attachments</string>
+	<key>NSCameraUsageDescription</key>
+	<string>The application uses your camera to take photos of attachments</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>nl</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>CFBundleVersion</key>
+	<string>23</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>De app gebruikt uw locatiegegevens om de locatie van uw melding te bepalen op basis van uw huidige locatie. Dit is niet verplicht, u kunt ook een locatie zoeken en prikken op de kaart.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>De app gebruikt uw locatiegegevens om de locatie van uw melding te bepalen op basis van uw huidige locatie. Dit is niet verplicht, u kunt ook een locatie zoeken en prikken op de kaart.</string>
+</dict>
+</plist>

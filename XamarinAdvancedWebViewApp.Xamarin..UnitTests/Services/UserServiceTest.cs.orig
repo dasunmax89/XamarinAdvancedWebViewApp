@@ -1,0 +1,76 @@
+﻿using System;
+using System.Diagnostics;
+using Xunit;
+using XamarinAdvancedWebViewApp.Xamarin.Core;
+using XamarinAdvancedWebViewApp.Xamarin.Core.Services;
+using XamarinAdvancedWebViewApp.Xamarin.Core.Models;
+using System.Threading.Tasks;
+using XamarinAdvancedWebViewApp.Xamarin.Core.Constants;
+
+namespace XamarinAdvancedWebViewAppUnitTest.Services
+{
+    public class UserServiceTest
+    {
+        public UserServiceTest()
+        {
+            GlobalSetting.Instance.BaseGatewayEndpoint = ApiConstants.BaseApiUrl;
+        }
+
+        [Fact]
+        public async void AuthenticateTest()
+        {
+            var requstProvider = new XamarinAdvancedWebViewApp.Xamarin.Core.Serialization.RequestProvider();
+
+            var userService = new UserService(requstProvider);
+
+            var authRequest = new AuthenticationRequest()
+            {
+                Password = "password",
+                UserName = "lex",
+            };
+
+            var response = await userService.Authenticate(authRequest);
+
+            Assert.True(response != null &&
+                        response.IsSuccessful &&
+                        response.IsSendSmsOk);
+
+            Debug.WriteLine("AuthenticateTest called.  message is " + response.Message);
+        }
+
+        [Fact]
+        public async Task VerifySmsCodeTest()
+        {
+            var requstProvider = new XamarinAdvancedWebViewApp.Xamarin.Core.Serialization.RequestProvider();
+
+            var userService = new UserService(requstProvider);
+
+<<<<<<< HEAD
+            var request = new SmsVerificationRequest()
+            {
+                Token1 = "token1",
+                Token2 = "token2",
+                UserName = "lex",
+                Password= "pass"
+=======
+            var request = new SmsVerificationRequest() 
+            {
+                UserName = "lex",
+                Password = "password",
+                Token1 = "123",
+                Token2 = "123"
+>>>>>>> 427a8b5959505b5e65d89d6bede0417d9beec5ff
+            };
+
+            var response = await userService.VerifySmsToken(request);
+
+<<<<<<< HEAD
+            Assert.True(response != null && response.IsSuccessful);
+=======
+            Assert.True(response.IsSuccessful);
+>>>>>>> 427a8b5959505b5e65d89d6bede0417d9beec5ff
+
+            Debug.WriteLine("VerifySmsCodeTest called");
+        }
+    }
+}
